@@ -15,9 +15,6 @@ public sealed class LayoutAppSettings
     [JsonPropertyName("DeviceCode")]
     public string DeviceCode { get; set; } = "";
 
-    [JsonPropertyName("Layout")]
-    public string? Layout { get; set; }
-
     [JsonPropertyName("LayoutsFolder")]
     public string LayoutsFolder { get; set; } = "Layouts";
 
