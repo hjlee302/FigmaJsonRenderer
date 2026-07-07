@@ -1,0 +1,199 @@
+{
+  "canvas": {
+    "width": 1920,
+    "height": 1081,
+    "background": "#FFFFFF"
+  },
+  "components": [
+    {
+      "type": "rectangle",
+      "x": 20,
+      "y": 20,
+      "width": 924,
+      "height": 320,
+      "background": "#24C01C",
+      "borderRadius": 48,
+      "bindings": {
+        "background": "device.counter.serviceArea.color"
+      },
+      "slot": "left"
+    },
+    {
+      "type": "text",
+      "x": 454,
+      "y": 28,
+      "width": 339,
+      "height": 272,
+      "text": "접수",
+      "fontSize": 184,
+      "color": "#FFFFFF",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "fontWeight": "bold",
+      "slot": "left",
+      "bindings": {
+        "text": "serviceArea.name"
+      }
+    },
+    {
+      "type": "rectangle",
+      "x": 48,
+      "y": 48,
+      "width": 264,
+      "height": 264,
+      "background": "#24C01C",
+      "borderRadius": 24,
+      "strokeColor": "#FFFFFF",
+      "strokeWidth": 8,
+      "bindings": {
+        "background": "device.counter.serviceArea.color"
+      },
+      "slot": "left"
+    },
+    {
+      "type": "text",
+      "x": 70,
+      "y": 31,
+      "width": 220,
+      "height": 272,
+      "text": "0",
+      "fontSize": 184,
+      "color": "#FFFFFF",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "fontWeight": "bold",
+      "slot": "left",
+      "bindings": {
+        "text": "device.counter.boothNumber"
+      }
+    },
+    {
+      "type": "text",
+      "x": 103,
+      "y": 589.5,
+      "width": 754,
+      "height": 235,
+      "text": "1007",
+      "fontSize": 320,
+      "lineHeight": 560,
+      "color": "#000000",
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "fontWeight": "bold",
+      "role": "ticketNumber",
+      "slot": "left"
+    },
+    {
+      "type": "icon",
+      "x": 40,
+      "y": 920,
+      "width": 120,
+      "height": 120,
+      "name": "arrow_left",
+      "src": "/assets/icons/arrow_left.svg",
+      "color": "#4777DE",
+      "slot": "left"
+    },
+    {
+      "type": "rectangle",
+      "x": 959.9999795867817,
+      "y": 405,
+      "width": 0.000020413218294379476,
+      "height": 532,
+      "background": "#000000",
+      "borderRadius": 0,
+      "strokeColor": "#000000",
+      "strokeWidth": 4,
+      "slot": "left"
+    },
+    {
+      "type": "rectangle",
+      "x": 976,
+      "y": 20,
+      "width": 924,
+      "height": 320,
+      "background": "#24C01C",
+      "borderRadius": 48,
+      "bindings": {
+        "background": "device.counter.serviceArea.color"
+      },
+      "slot": "right"
+    },
+    {
+      "type": "text",
+      "x": 976,
+      "y": 28,
+      "width": 632,
+      "height": 272,
+      "text": "접수",
+      "fontSize": 184,
+      "color": "#FFFFFF",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "fontWeight": "bold",
+      "slot": "right",
+      "bindings": {
+        "text": "serviceArea.name"
+      }
+    },
+    {
+      "type": "rectangle",
+      "x": 1608,
+      "y": 48,
+      "width": 264,
+      "height": 264,
+      "background": "#24C01C",
+      "borderRadius": 24,
+      "strokeColor": "#FFFFFF",
+      "strokeWidth": 8,
+      "bindings": {
+        "background": "device.counter.serviceArea.color"
+      },
+      "slot": "right"
+    },
+    {
+      "type": "text",
+      "x": 1630,
+      "y": 31,
+      "width": 220,
+      "height": 272,
+      "text": "0",
+      "fontSize": 184,
+      "color": "#FFFFFF",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "fontWeight": "bold",
+      "slot": "right",
+      "bindings": {
+        "text": "device.counter.boothNumber"
+      }
+    },
+    {
+      "type": "text",
+      "x": 1063,
+      "y": 589.5,
+      "width": 754,
+      "height": 235,
+      "text": "1008",
+      "fontSize": 320,
+      "lineHeight": 560,
+      "color": "#000000",
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "fontWeight": "bold",
+      "role": "ticketNumber",
+      "slot": "right"
+    },
+    {
+      "type": "icon",
+      "x": 1760,
+      "y": 920,
+      "width": 120,
+      "height": 120,
+      "name": "arrow_right",
+      "src": "/assets/icons/arrow_right.svg",
+      "color": "#4777DE",
+      "slot": "right"
+    }
+  ]
+}

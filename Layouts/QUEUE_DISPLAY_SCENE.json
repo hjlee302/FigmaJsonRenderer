@@ -1,0 +1,90 @@
+{
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "background": "#FFFFFF"
+  },
+  "components": [
+    {
+      "type": "rectangle",
+      "x": 25,
+      "y": 59,
+      "width": 1870,
+      "height": 406,
+      "background": "#00CE56",
+      "borderRadius": 52
+    },
+    {
+      "type": "text",
+      "x": 89,
+      "y": 152,
+      "width": 177,
+      "height": 220,
+      "text": "0",
+      "fontSize": 300,
+      "lineHeight": 300,
+      "color": "#FFFFFF",
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "fontWeight": "bold",
+      "bindings": {
+        "text": "device.counter.boothNumber"
+      }
+    },
+    {
+      "type": "text",
+      "x": 309,
+      "y": 188.5,
+      "width": 395,
+      "height": 147,
+      "text": "창구",
+      "fontSize": 200,
+      "lineHeight": 200,
+      "color": "#FFFFFF",
+      "textAlign": "left",
+      "verticalAlign": "top"
+    },
+    {
+      "type": "rectangle",
+      "x": 759,
+      "y": 150,
+      "width": 0,
+      "height": 224,
+      "background": "#FFFFFF",
+      "borderRadius": 0,
+      "strokeColor": "#FFFFFF",
+      "strokeWidth": 11
+    },
+    {
+      "type": "text",
+      "x": 776,
+      "y": 188.5,
+      "width": 1055,
+      "height": 147,
+      "text": "접수",
+      "fontSize": 200,
+      "lineHeight": 200,
+      "color": "#FFFFFF",
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "bindings": {
+        "text": "serviceArea.name"
+      }
+    },
+    {
+      "type": "text",
+      "x": 368,
+      "y": 540,
+      "width": 1184,
+      "height": 400,
+      "text": "6219",
+      "fontSize": 400,
+      "lineHeight": 400,
+      "color": "#000000",
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "fontWeight": "bold",
+      "role": "ticketNumber"
+    }
+  ]
+}

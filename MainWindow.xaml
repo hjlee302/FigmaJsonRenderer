@@ -1,12 +1,21 @@
-﻿<Window x:Class="FigmaJsonRenderer.MainWindow"
+<Window x:Class="FigmaJsonRenderer.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FigmaJsonRenderer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="Figma JSON Renderer"
+        Width="1280"
+        Height="720"
+        Background="#202020"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="16">
+        <Viewbox Stretch="Uniform">
+            <Canvas x:Name="RenderCanvas"
+                    Width="1920"
+                    Height="1080"
+                    SnapsToDevicePixels="True" />
+        </Viewbox>
     </Grid>
 </Window>

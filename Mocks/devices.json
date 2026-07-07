@@ -1,0 +1,20 @@
+[
+  {
+    "code": "DISP_1",
+    "layout": {
+      "code": "QUEUE_DISPLAY_SCENE"
+    }
+  },
+  {
+    "code": "DISP_2",
+    "layout": {
+      "code": "QUEUE_DISPLAY_SCENE_DOUBLE"
+    }
+  },
+  {
+    "code": "DISP_3",
+    "layout": {
+      "code": "QUEUE_DISPLAY_SCENE_SINGLE"
+    }
+  }
+]

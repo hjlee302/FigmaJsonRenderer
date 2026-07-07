@@ -1,13 +1,5 @@
-﻿using System.Text;
+using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace FigmaJsonRenderer
 {
@@ -19,6 +11,24 @@ namespace FigmaJsonRenderer
         public MainWindow()
         {
             InitializeComponent();
+            Loaded += OnLoaded;
+        }
+
+        private async void OnLoaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                LayoutAppSettings settings = await LayoutAppSettings.LoadAsync(
+                    Path.Combine(AppContext.BaseDirectory, "appsettings.json"));
+                FigmaLayout layout = await LayoutDocumentLoader.LoadAsync(settings);
+
+                FigmaLayoutRenderer renderer = new(RenderCanvas, new LayoutBindingResolver());
+                renderer.Render(layout);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Figma JSON Renderer");
+            }
         }
     }
 }
