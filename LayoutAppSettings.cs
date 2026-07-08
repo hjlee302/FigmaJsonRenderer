@@ -10,7 +10,7 @@ public sealed class LayoutAppSettings
     public bool IsTest { get; set; } = true;
 
     [JsonPropertyName("ServerIp")]
-    public string ServerIp { get; set; } = "127.0.0.1:5173";
+    public string ServerIp { get; set; } = "";
 
     [JsonPropertyName("DeviceCode")]
     public string DeviceCode { get; set; } = "";

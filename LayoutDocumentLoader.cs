@@ -8,6 +8,7 @@ public static class LayoutDocumentLoader
 {
     private static readonly HttpClient HttpClient = new();
 
+    // 서버 로컬 구분
     public static async Task<FigmaLayout> LoadAsync(LayoutAppSettings settings)
     {
         string json = settings.IsTest

@@ -1,6 +1,7 @@
 using FigmaJsonRenderer.Helpers;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace FigmaJsonRenderer;
 
@@ -15,28 +16,24 @@ public sealed class TextComponentRenderer : ComponentRenderer
     {
         string text = Resolve(component, "text", component.Text ?? "");
 
-        TextBlock textBlock = new()
+        FigmaTextElement textElement = new()
         {
             Text = text,
             FontSize = component.FontSize ?? 16,
             Foreground = FigmaRenderHelpers.BrushFrom(component.Color ?? "#000000"),
             FontWeight = FigmaRenderHelpers.ParseFontWeight(component.FontWeight),
             TextAlignment = FigmaRenderHelpers.ParseTextAlignment(component.TextAlign),
-            VerticalAlignment = FigmaRenderHelpers.ParseVerticalAlignment(component.VerticalAlign),
-            HorizontalAlignment = FigmaRenderHelpers.HorizontalAlignmentForText(component.TextAlign),
-            TextWrapping = TextWrapping.NoWrap
+            TextVerticalAlignment = FigmaRenderHelpers.ParseVerticalAlignment(component.VerticalAlign),
+            HorizontalAlignment = HorizontalAlignment.Stretch,
+            LineHeight = component.LineHeight,
+            ClipToBounds = false
         };
-
-        if (component.LineHeight is > 0)
-        {
-            textBlock.LineStackingStrategy = LineStackingStrategy.BlockLineHeight;
-            textBlock.LineHeight = component.LineHeight.Value;
-        }
 
         return ApplyFrame(
             new Grid
             {
-                Children = { textBlock }
+                ClipToBounds = false,
+                Children = { textElement }
             },
             component);
     }
