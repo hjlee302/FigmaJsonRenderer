@@ -22,7 +22,11 @@ namespace FigmaJsonRenderer
                     Path.Combine(AppContext.BaseDirectory, "appsettings.json"));
                 FigmaLayout layout = await LayoutDocumentLoader.LoadAsync(settings);
 
-                FigmaLayoutRenderer renderer = new(RenderCanvas, new LayoutBindingResolver());
+                LayoutBindingResolver bindingResolver = settings.IsTest
+                    ? new LayoutBindingResolver()
+                    : new LayoutBindingResolver(await DeviceDocumentLoader.LoadAsync(settings));
+
+                FigmaLayoutRenderer renderer = new(RenderCanvas, bindingResolver);
                 renderer.Render(layout);
             }
             catch (Exception ex)
